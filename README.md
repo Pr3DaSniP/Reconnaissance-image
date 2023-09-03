@@ -29,7 +29,7 @@ LBP(x_c, y_c) = \sum_{n=0}^{7} 2^ns(i_n - i_c)
 ```
     
 ```math
-s(x) = \begin{cases}
+S(x) = \begin{cases}
 1 & \text{si } x \leq 0 \\
 0 & \text{sinon}
 \end{cases}
