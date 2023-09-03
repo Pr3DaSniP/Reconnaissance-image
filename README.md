@@ -66,16 +66,30 @@ M-LBP(x_c, y_c) = S(f(i-1,j-1) -m)2^3 + S(f(i-1,j) -m)2^2 + S(f(i,j) -m)2^1 + S(
 - Extended Center-Symmetric Local Binary Pattern (XCS-LBP)
 
 ```math
-XCS-LBP(gc) = \newline
-S((g_0 - g_4) + g_c + (g_0 - g_c) * (g_4 - g_c)) * 2^0 + \newline
-S((g_1 - g_5) + g_c + (g_1 - g_c) * (g_5 - g_c)) * 2^1 + \newline
-S((g_2 - g_6) + g_c + (g_2 - g_c) * (g_6 - g_c)) * 2^2 + \newline
-S((g_3 - g_7) + g_c + (g_3 - g_c) * (g_7 - g_c)) * 2^3 \newline
+XCS-LBP(gc) =
+```
+
+```math
+S((g_0 - g_4) + g_c + (g_0 - g_c) * (g_4 - g_c)) * 2^0 +
+```
+
+```math
+S((g_1 - g_5) + g_c + (g_1 - g_c) * (g_5 - g_c)) * 2^1 +
+```
+
+```math
+S((g_2 - g_6) + g_c + (g_2 - g_c) * (g_6 - g_c)) * 2^2 +
+```
+
+```math
+S((g_3 - g_7) + g_c + (g_3 - g_c) * (g_7 - g_c)) * 2^3
 ```
 avec 
 
 <div align="center">
-    <img src="https://latex.codecogs.com/svg.latex?\begin{array}{|c|c|c|} \hline g5 & g6 & g7 \\ \hline g4 & gc & g0 \\ \hline g3 & g2 & g1 \\ \hline \end{array}" />
+
+![tab](assets/tab.png)
+
 </div>
 
 | Image | Image égalisé | Image spécifié |
