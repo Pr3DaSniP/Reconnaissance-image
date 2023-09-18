@@ -38,13 +38,20 @@ void LBP(Mat& image) {
 	for (int y = 0; y < image.rows; y++) {
 		for (int x = 0; x < image.cols; x++) {
 			int centre = image.at<uchar>(y, x);
+
+			// Si le centre est sur le bord de l'image, on skip
+			if (x == 0 || x == image.cols - 1 || y == 0 || y == image.rows - 1) {
+				lbp.at<uchar>(y, x) = 0;
+				continue;
+			}
+			
 			int value = 0;
 			for (int i = 0; i < 8; i++) {
 				int x2 = x + Directions[i].first;
 				int y2 = y + Directions[i].second;
 				if (x2 >= 0 && x2 < image.cols && y2 >= 0 && y2 < image.rows) {
 					int niveauGrisVoisin = image.at<uchar>(y2, x2);
-					value += s(niveauGrisVoisin - centre) * pow(2, i);
+					value += s(niveauGrisVoisin - centre) * pow(2, 7 - i);
 				}
 			}
 			lbp.at<uchar>(y, x) = value;
